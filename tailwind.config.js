@@ -18,6 +18,9 @@ module.exports = {
           },
         }
       },
+      height: {
+        '110': '440px'
+      }
     },
   },
   plugins: [],

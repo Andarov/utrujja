@@ -5,8 +5,9 @@ const account1 = {
     fName: "Abbos Komilov",
     age: 23,
     techs: ["HTML", "CSS", "Tailwind", "Javascript"],
-    projects: 11,
+    projects: 21,
     gender: "boy",
+    active: true
 };
 const account2 = {
     image: "./img/aisha.jpg",
@@ -15,30 +16,34 @@ const account2 = {
     techs: ["HTML", "CSS", "Bootstrap"],
     projects: 8,
     gender: "girl",
+    active: false
 };
 const account3 = {
     image: "./img/arthur.jpg",
     fName: "Artur Grigoryan",
-    age: 26,
+    age: 56,
     techs: ["HTML", "CSS", "Tailwind", "Javascript"],
     projects: 24,
     gender: "boy",
+    active: true
 };
 const account4 = {
     image: "./img/cristian.jpg",
     fName: "Karimjon Rahimov",
-    age: 23,
+    age: 33,
     techs: ["HTML", "CSS"],
     projects: 3,
     gender: "boy",
+    active: false
 };
 const account5 = {
     image: "./img/cruz.jpg",
     fName: "Kozimjon Raimov",
-    age: 21,
+    age: 27,
     techs: ["HTML", "CSS", "Bootstrap", "Sass"],
     projects: 13,
     gender: "boy",
+    active: true
 };
 const account6 = {
     image: "./img/drake.jpg",
@@ -47,6 +52,7 @@ const account6 = {
     techs: ["HTML", "CSS"],
     projects: 6,
     gender: "boy",
+    active: true
 };
 const account7 = {
     image: "./img/griffin.jpg",
@@ -55,6 +61,7 @@ const account7 = {
     techs: ["HTML", "CSS"],
     projects: 3,
     gender: "boy",
+    active: false
 };
 const account8 = {
     image: "./img/kady.jpg",
@@ -63,6 +70,7 @@ const account8 = {
     techs: ["HTML", "CSS", "Tailwind", "Javascript"],
     projects: 28,
     gender: "girl",
+    active: true
 };
 const account9 = {
     image: "./img/nikita.jpg",
@@ -71,6 +79,7 @@ const account9 = {
     techs: ["HTML", "CSS", "Bootstrap", "Tailwind"],
     projects: 26,
     gender: "girl",
+    active: true
 };
 
 const accounts = [
@@ -212,5 +221,4 @@ elAllBtn.addEventListener("click", function () {
     searchTech()
     inputValDel()
 });
-
 
