@@ -124,7 +124,7 @@ elTotal.textContent = accounts.length;
 const searchName = function() {
     const elName = document.querySelectorAll("#name");
     elForm["name-input"].addEventListener("input", function () {
-        const inputNameValue = form["name-input"].value;
+        const inputNameValue = form["name-input"].value.toLowerCase();
         elName.forEach(function (item) {
             if (item.textContent.toLowerCase().includes(inputNameValue)) {
                 item.parentElement.classList.remove("hidden");
@@ -140,7 +140,7 @@ searchName()
 const searchTech = function(){
     const elTechs = document.querySelectorAll("#techs");
     elForm["techs-input"].addEventListener("input", function () {
-        const inputTechsValue = form["techs-input"].value;
+        const inputTechsValue = form["techs-input"].value.toLowerCase();
         elTechs.forEach(function (item) {
             if (item.textContent.toLowerCase().includes(inputTechsValue)) {
                 item.parentElement.classList.remove("hidden");
