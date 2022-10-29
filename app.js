@@ -1,98 +1,88 @@
 "use strict";
 // Users
-const account1 = {
-    image: "./img/aden.jpg",
-    fName: "Abbos Komilov",
-    age: 23,
-    techs: ["HTML", "CSS", "Tailwind", "Javascript"],
-    projects: 21,
-    gender: "boy",
-    active: true
-};
-const account2 = {
-    image: "./img/aisha.jpg",
-    fName: "AIsha Komilova",
-    age: 19,
-    techs: ["HTML", "CSS", "Bootstrap"],
-    projects: 8,
-    gender: "girl",
-    active: false
-};
-const account3 = {
-    image: "./img/arthur.jpg",
-    fName: "Artur Grigoryan",
-    age: 56,
-    techs: ["HTML", "CSS", "Tailwind", "Javascript"],
-    projects: 24,
-    gender: "boy",
-    active: true
-};
-const account4 = {
-    image: "./img/cristian.jpg",
-    fName: "Karimjon Rahimov",
-    age: 33,
-    techs: ["HTML", "CSS"],
-    projects: 3,
-    gender: "boy",
-    active: false
-};
-const account5 = {
-    image: "./img/cruz.jpg",
-    fName: "Kozimjon Raimov",
-    age: 27,
-    techs: ["HTML", "CSS", "Bootstrap", "Sass"],
-    projects: 13,
-    gender: "boy",
-    active: true
-};
-const account6 = {
-    image: "./img/drake.jpg",
-    fName: "Abdulla Abdiyev",
-    age: 24,
-    techs: ["HTML", "CSS"],
-    projects: 6,
-    gender: "boy",
-    active: true
-};
-const account7 = {
-    image: "./img/griffin.jpg",
-    fName: "Arslon Suyarov",
-    age: 23,
-    techs: ["HTML", "CSS"],
-    projects: 3,
-    gender: "boy",
-    active: false
-};
-const account8 = {
-    image: "./img/kady.jpg",
-    fName: "Hafiza Rasulova",
-    age: 22,
-    techs: ["HTML", "CSS", "Tailwind", "Javascript"],
-    projects: 28,
-    gender: "girl",
-    active: true
-};
-const account9 = {
-    image: "./img/nikita.jpg",
-    fName: "Namuna Yuldasheva",
-    age: 19,
-    techs: ["HTML", "CSS", "Bootstrap", "Tailwind"],
-    projects: 26,
-    gender: "girl",
-    active: true
-};
-
 const accounts = [
-    account1,
-    account2,
-    account3,
-    account4,
-    account5,
-    account6,
-    account7,
-    account8,
-    account9,
-];
+    {
+        image: "./img/aden.jpg",
+        fName: "Abbos Komilov",
+        age: 23,
+        techs: ["HTML", "CSS", "Tailwind", "Javascript"],
+        projects: 21,
+        gender: "boy",
+        active: true
+    },
+    {
+        image: "./img/aisha.jpg",
+        fName: "AIsha Komilova",
+        age: 19,
+        techs: ["HTML", "CSS", "Bootstrap"],
+        projects: 8,
+        gender: "girl",
+        active: false
+    },
+    {
+        image: "./img/arthur.jpg",
+        fName: "Artur Grigoryan",
+        age: 56,
+        techs: ["HTML", "CSS", "Tailwind", "Javascript"],
+        projects: 24,
+        gender: "boy",
+        active: true
+    },
+    {
+        image: "./img/cristian.jpg",
+        fName: "Karimjon Rahimov",
+        age: 33,
+        techs: ["HTML", "CSS"],
+        projects: 3,
+        gender: "boy",
+        active: false
+    },
+    {
+        image: "./img/cruz.jpg",
+        fName: "Kozimjon Raimov",
+        age: 27,
+        techs: ["HTML", "CSS", "Bootstrap", "Sass"],
+        projects: 13,
+        gender: "boy",
+        active: true
+    },
+    {
+        image: "./img/drake.jpg",
+        fName: "Abdulla Abdiyev",
+        age: 24,
+        techs: ["HTML", "CSS"],
+        projects: 6,
+        gender: "boy",
+        active: true
+    },
+    {
+        image: "./img/griffin.jpg",
+        fName: "Arslon Suyarov",
+        age: 23,
+        techs: ["HTML", "CSS"],
+        projects: 3,
+        gender: "boy",
+        active: false
+    },
+    {
+        image: "./img/kady.jpg",
+        fName: "Hafiza Rasulova",
+        age: 22,
+        techs: ["HTML", "CSS", "Tailwind", "Javascript"],
+        projects: 28,
+        gender: "girl",
+        active: true
+    },
+    {
+        image: "./img/nikita.jpg",
+        fName: "Namuna Yuldasheva",
+        age: 19,
+        techs: ["HTML", "CSS", "Bootstrap", "Tailwind"],
+        projects: 26,
+        gender: "girl",
+        active: true
+    }
+]
 
 // O'zgaruvchilar
 const elUser = document.querySelector("#user");

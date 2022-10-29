@@ -1,98 +1,88 @@
 "use strict";
 // Users
-const account1 = {
-    image: "./img/aden.jpg",
-    fName: "Abbos Komilov",
-    age: 23,
-    techs: ["HTML", "CSS", "Tailwind", "Javascript"],
-    projects: 21,
-    gender: "male",
-    active: true
-};
-const account2 = {
-    image: "./img/aisha.jpg",
-    fName: "AIsha Komilova",
-    age: 19,
-    techs: ["HTML", "CSS", "Bootstrap"],
-    projects: 8,
-    gender: "female",
-    active: false
-};
-const account3 = {
-    image: "./img/arthur.jpg",
-    fName: "Artur Grigoryan",
-    age: 56,
-    techs: ["HTML", "CSS", "Tailwind", "Javascript"],
-    projects: 24,
-    gender: "male",
-    active: true
-};
-const account4 = {
-    image: "./img/cristian.jpg",
-    fName: "Karimjon Rahimov",
-    age: 33,
-    techs: ["HTML", "CSS"],
-    projects: 3,
-    gender: "male",
-    active: false
-};
-const account5 = {
-    image: "./img/cruz.jpg",
-    fName: "Kozimjon Raimov",
-    age: 27,
-    techs: ["HTML", "CSS", "Bootstrap", "Sass"],
-    projects: 13,
-    gender: "male",
-    active: true
-};
-const account6 = {
-    image: "./img/drake.jpg",
-    fName: "Abdulla Abdiyev",
-    age: 24,
-    techs: ["HTML", "CSS"],
-    projects: 6,
-    gender: "male",
-    active: true
-};
-const account7 = {
-    image: "./img/griffin.jpg",
-    fName: "Arslon Suyarov",
-    age: 23,
-    techs: ["HTML", "CSS"],
-    projects: 3,
-    gender: "male",
-    active: false
-};
-const account8 = {
-    image: "./img/kady.jpg",
-    fName: "Hafiza Rasulova",
-    age: 22,
-    techs: ["HTML", "CSS", "Tailwind", "Javascript"],
-    projects: 28,
-    gender: "female",
-    active: true
-};
-const account9 = {
-    image: "./img/nikita.jpg",
-    fName: "Namuna Yuldasheva",
-    age: 19,
-    techs: ["HTML", "CSS", "Bootstrap", "Tailwind"],
-    projects: 26,
-    gender: "female",
-    active: true
-};
-
 const accounts = [
-    account1,
-    account2,
-    account3,
-    account4,
-    account5,
-    account6,
-    account7,
-    account8,
-    account9,
-];
+    {
+        image: "./img/aden.jpg",
+        fName: "Abbos Komilov",
+        age: 23,
+        techs: ["HTML", "CSS", "Tailwind", "Javascript"],
+        projects: 21,
+        gender: "male",
+        active: true
+    },
+    {
+        image: "./img/aisha.jpg",
+        fName: "AIsha Komilova",
+        age: 19,
+        techs: ["HTML", "CSS", "Bootstrap"],
+        projects: 8,
+        gender: "female",
+        active: false
+    },
+    {
+        image: "./img/arthur.jpg",
+        fName: "Artur Grigoryan",
+        age: 56,
+        techs: ["HTML", "CSS", "Tailwind", "Javascript"],
+        projects: 24,
+        gender: "male",
+        active: true
+    },
+    {
+        image: "./img/cristian.jpg",
+        fName: "Karimjon Rahimov",
+        age: 33,
+        techs: ["HTML", "CSS"],
+        projects: 3,
+        gender: "male",
+        active: false
+    },
+    {
+        image: "./img/cruz.jpg",
+        fName: "Kozimjon Raimov",
+        age: 27,
+        techs: ["HTML", "CSS", "Bootstrap", "Sass"],
+        projects: 13,
+        gender: "male",
+        active: true
+    },
+    {
+        image: "./img/drake.jpg",
+        fName: "Abdulla Abdiyev",
+        age: 24,
+        techs: ["HTML", "CSS"],
+        projects: 6,
+        gender: "male",
+        active: true
+    },
+    {
+        image: "./img/griffin.jpg",
+        fName: "Arslon Suyarov",
+        age: 23,
+        techs: ["HTML", "CSS"],
+        projects: 3,
+        gender: "male",
+        active: false
+    },
+    {
+        image: "./img/kady.jpg",
+        fName: "Hafiza Rasulova",
+        age: 22,
+        techs: ["HTML", "CSS", "Tailwind", "Javascript"],
+        projects: 28,
+        gender: "female",
+        active: true
+    },
+    {
+        image: "./img/nikita.jpg",
+        fName: "Namuna Yuldasheva",
+        age: 19,
+        techs: ["HTML", "CSS", "Bootstrap", "Tailwind"],
+        projects: 26,
+        gender: "female",
+        active: true
+    }
+]
 
 // Darsdagi faollik
 const elTbody = document.querySelector('#tbody')
@@ -155,7 +145,7 @@ const myChart = new Chart(
     document.getElementById('myChart'),
     configGender
     );
-
+    
     // Yosh diagramma
     const junior = accounts.filter(function checkAdult(acc) {
         return acc.age < 20
@@ -164,7 +154,7 @@ const myChart = new Chart(
     const midlle = accounts.filter(function checkAdult(acc) {
         return acc.age > 20 && acc.age < 50
     });
-
+    
     const old = accounts.filter(function checkAdult(acc) {
         return acc.age > 50
     });
@@ -178,12 +168,12 @@ const myChart = new Chart(
                 'rgba(255, 26, 104, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
                 'rgba(255, 206, 86, 0.2)',
-              ],
-              borderColor: [
+            ],
+            borderColor: [
                 'rgba(255, 26, 104, 1)',
                 'rgba(54, 162, 235, 1)',
                 'rgba(255, 206, 86, 1)',
-              ],
+            ],
             borderWidth: 1
         }]
     };
@@ -200,6 +190,6 @@ const myChart = new Chart(
     const myCharts = new Chart(
         document.getElementById('myCharts'),
         configAge
-        );
+    );
         
         
