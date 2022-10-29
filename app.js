@@ -140,7 +140,7 @@ searchName()
 const searchTech = function(){
     const elTechs = document.querySelectorAll("#techs");
     elForm["techs-input"].addEventListener("input", function () {
-        const inputTechsValue = form["techs-input"].value.toLowerCase();
+        const inputTechsValue = elForm["techs-input"].value.toLowerCase();
         elTechs.forEach(function (item) {
             if (item.textContent.toLowerCase().includes(inputTechsValue)) {
                 item.parentElement.classList.remove("hidden");
@@ -222,3 +222,35 @@ elAllBtn.addEventListener("click", function () {
     inputValDel()
 });
 
+// Create user with modal
+const elAddUserBtn = document.querySelector('#add-user')
+const elModal = document.querySelector('#modal');
+const elOverlay = document.querySelector('#qoplama');
+const elCloseBtn = document.querySelector('#exit-btn');
+
+const toggleModal = function () {
+    elModal.classList.toggle('hidden');
+    elOverlay.classList.toggle('hidden');
+};
+
+elAddUserBtn.addEventListener('click', function(){
+    toggleModal()
+    elErrorText.classList.add('hidden')
+})
+
+elCloseBtn.addEventListener('click', toggleModal);
+elOverlay.addEventListener('click', toggleModal);
+
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+        toggleModal();
+    }
+});
+
+const elModalForm = document.querySelector('#modal-form')
+const elSubmitBtn = document.querySelector('#submit-btn')
+const elErrorText = document.querySelector('#err')
+elSubmitBtn.addEventListener('click', function(){
+    elErrorText.classList.remove('hidden')
+    elModalForm.reset()
+})

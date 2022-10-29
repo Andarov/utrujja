@@ -9,15 +9,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&family=Livvic:wght@400;500;700&display=swap" rel="stylesheet">
-
+    
     <!-- ICONS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    
     <!-- CSS -->
     <link rel="stylesheet" href="../dist/output.css">
 </head>
-<body class="font-livvic bg-ut-green-body text-white">
-    
+<body class="font-livvic bg-ut-green-body text-white">    
     <!-- Site-header -->
     <header class="py-5 md:py-7">
         <div class="w-full max-w-6xl px-5 mx-auto flex justify-between items-center">
@@ -31,7 +30,7 @@
             <a class="border border-white font-medium py-1 px-5 rounded-3xl hover:bg-white hover:text-black transition-all md:py-2 md:px-7" href="tel: +998945686997">Bog'lanish</a>
         </div>
     </header>
-
+    
     <!-- Main -->
     <main id="main">
         <!-- Main-container -->
@@ -41,7 +40,7 @@
                 <h2 class="text-2xl font-semibold mb-5 text-center md:text-3xl">Assalomu aleykum</h2>
                 <p class="text-center text-sm font-medium sm:text-base">Sizga <strong class="text-yellow-500 text-base md:text-xl">'Utrujja team'</strong> o'quvchilari haqida ma'lumot berishdan mamnunman!</p>
             </div>
-
+            
             <!-- Form -->
             <form id="form" class="mb-5">
                 <div class="grid gap-5 md:grid-cols-2 md:gap-12">
@@ -49,24 +48,59 @@
                     <input id="techs-input" class="bg-transparent border-b border-white focus:outline-none" type="text" placeholder="Texnologiy bo'yicha qidiruv" autocomplete="off">
                 </div>
             </form>
-
+            
             <div class="flex justify-end space-x-3 mb-5">
                 <button id="all-btn" class="bg-slate-800 px-3 py-1 text-yellow-200">Hammasi</button>
                 <button id="boy-btn" class="bg-slate-800 px-3 py-1 text-yellow-200">Bollar</button>
                 <button id="girl-btn" class="bg-slate-800 px-3 py-1 text-yellow-200">Qizlar</button>
             </div>
-
+            
             <!-- Pupils -->
-            <ul id="user" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 pb-16">
+            <ul id="user" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 pb-10">
             </ul>
-            <div class="flex justify-end text-xl font-medium mb-4">Jami o'quvchilar soni: <span id="total" class="text-yellow-500 ml-2"> </span></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 pb-5 md:pb-10">
+                <div>
+                    <button id="add-user" class="text-lg focus:outline-none">+ Jamoaga qo'shilish</button>
+                </div>
+                <div class="flex justify-end font-medium md:text-lg">Jami o'quvchilar soni: <span id="total" class="text-yellow-500 ml-2"> </span></div>
+            </div>
         </div>
     </main>
-
+    
+    <!-- Footer -->
     <footer class="py-5 bg-ut-green-item text-white text-center font-medium">
         Created by Andarov
     </footer>
 
+    <!-- Modal -->
+    <div id="modal" style="position:fixed ;" class="w-11/12 bg-ut-green-item p-5 rounded-lg z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:w-3/6 shadow-2xl">
+        <button id="exit-btn" class="text-4xl block  ml-auto cursor-pointer">&times;</button>
+        <h1 class="text-center mb-5 text-xl">Malumotlaringizni kiriting</h1>
+        <form id="modal-form" class="flex flex-col justify-center items-center space-y-3">
+            <!-- Rasm -->
+            <label class="w-full text-center py-1 px-2 bg-ut-green-body/10 border border-white/40 focus:outline-none" for="image-input">Rasmingizni kiriting</label>
+            <input  id="image-input" class="hidden" type="file" name="image_uploads" accept=".jpg, .jpeg, .png" multiple="">
+            <!-- Ism va familiya -->
+   
+            <input id="fName-input" class="w-full text-center py-1 px-2 bg-ut-green-body/10 border border-white/40 focus:outline-none" type="text" placeholder="Ism va familiyangizni kiriting" required autocomplete="off">
+            <!-- Yosh -->
+            <input id="age-input" class="w-full text-center py-1 px-2 bg-ut-green-body/10 border border-white/40 focus:outline-none" type="number" placeholder="Yoshingiz" required autocomplete="off">
+            <!-- Techs -->
+            <input id="ntechs-input" class="w-full text-center py-1 px-2 bg-ut-green-body/10 border border-white/40 focus:outline-none" type="text" placeholder="Qaysi texnologiyalarni bilasiz (Agarda bilsangiz)" autocomplete="off">
+            <!-- Projects -->
+            <input id="projects-input" class="w-full text-center py-1 px-2 bg-ut-green-body/10 border border-white/40 focus:outline-none" type="number" placeholder="Projectlaringiz soni (Agarda bo'lsa)" required autocomplete="off">
+            <!-- Button -->
+            <div class="flex justify-between items-center">
+                <p id="err" class="mr-10 hidden text-green-500">Tez orada bu xizmat qo'shiladi</p>
+                <button id="submit-btn" class="px-4 py-1 border border-white/40 ml-auto cursor-pointer">Saqlash</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Overlay -->
+    <div id="qoplama" style="position:fixed;" class="top-0 left-0  w-full h-screen bg-black/50 filter blur-sm z-10"></div>
+  
+    
     <script src="app.js"></script>
 </body>
 </html>
